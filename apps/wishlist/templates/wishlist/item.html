@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ product.product_name }}</title>
+  </head>
+  <body>
+    <a href='/dashboard'>Home</a>
+    <a href='/logout'>Logout</a>
+    <h1>Product: {{ product.product_name }}</h1>
+    <h2>Users who added this product/item in their wish list:</h2>
+    {% for users in product.users.all %}
+    <p>{{ users.first_name }}</p>
+    {% endfor %}
+
+  </body>
+</html>
